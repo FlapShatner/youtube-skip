@@ -8,7 +8,9 @@ const observer = new MutationObserver((mutations) => {
 
    if (skipButton && skipButtonText && skipButtonText.textContent === 'Skip Ads') {
     // Click the skip button
-    skipButton.click()
+    setTimeout(() => {
+     skipButton.click()
+    }, 5000)
    }
   }
  })
