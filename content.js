@@ -6,7 +6,11 @@ const observer = new MutationObserver((mutations) => {
    const skipButton = document.querySelector('.ytp-ad-skip-button')
    const skipButtonText = document.querySelector('.ytp-ad-skip-button-text')
 
-   if ((skipButton && skipButtonText && skipButtonText.textContent === 'Skip Ads') || skipButtonText.textContent === 'Skip Ad') {
+   if (
+    (skipButton && skipButtonText && skipButtonText.textContent === 'Skip Ads') ||
+    skipButtonText.textContent === 'Skip Ad' ||
+    skipButtonText.textContent === 'Skip'
+   ) {
     // Click the skip button
     setTimeout(() => {
      skipButton.click()
