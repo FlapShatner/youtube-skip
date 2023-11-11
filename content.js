@@ -3,7 +3,7 @@ const observer = new MutationObserver((mutations) => {
  mutations.forEach((mutation) => {
   if (mutation.addedNodes.length) {
    // Check for the skip button
-   const skipButton = document.querySelector('.ytp-ad-skip-button')
+   const skipButton = document.querySelector('.ytp-ad-skip-button') ?? document.querySelector('.ytp-ad-skip-button-modern')
    const skipButtonText = document.querySelector('.ytp-ad-skip-button-text')
 
    if (
